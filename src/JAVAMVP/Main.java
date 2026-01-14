@@ -1,5 +1,7 @@
 package JAVAMVP;
 
+import java.awt.*;
+
 public class Main {
     public static void main(String[] args){
         /*
@@ -26,10 +28,31 @@ public class Main {
         //Danya.print();
         //Danya.setName("Vasya");
         //System.out.println("Мое новое имя " + Danya.name);
-        Car Machine = new Car(1988,"BMW");
-        int Andrei = Machine.getYear();
+        //Car Machine = new Car(1988,"BMW");
+        //int Andrei = Machine.getYear();
+        //Machine.print();
 
-        System.out.println();
+        //Rectangle MathS = new Rectangle(5,10);
+        //MathS.setWidth(20);
+        //MathS.print();
+
+        //Book Classic = new Book("War and Mir","Tolstoy");
+        //Classic.setAuthor("Pyshkin");
+        //Classic.print();
+
+        //Circle Okr = new Circle(6);
+        //Okr.setRadius(8);
+       //Okr.print();
+
+        //Teacher One = new Teacher("Василий Иванович","Математика");
+        //One.setSubject("Информатика");
+        //One.print();
+
+        Product Meat = new Product("Курица",1000);
+        Meat.setDiscount(12);
+        Meat.printInfo();
+
+
 
     }
 }
