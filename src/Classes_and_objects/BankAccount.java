@@ -4,11 +4,14 @@ public class BankAccount {
     String owner;
     int balance;
 
+
+
     public BankAccount(String newOwner,int newBalance) {
         this.owner = newOwner;
         this.balance = newBalance;
     }
-        public void setOwner(String newOwner){
+    public void setOwner(String newOwner){
+
         this.owner = newOwner;
         }
 
@@ -27,8 +30,18 @@ public class BankAccount {
         this.balance -= 250;
         }
 
-        void printBalance(){
-            System.out.println("Ваш баланс " + this.balance );
+        /* Исправил ошибки при создании методов убрав хардкод, теперь
+        public void deposit(int amount){
+        this.balance += amount;
+        }
+
+        public void withdraw(int amount){
+        this.balance -= amount;
+        }
+         */
+
+     void printBalance(){
+         System.out.println("Ваш баланс " + this.balance);
         }
 
 

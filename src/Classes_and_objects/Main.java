@@ -21,6 +21,7 @@ public class Main {
         ytka.withdraw(50);
         ytka.printBalance();
 
+
         Point otrezok = new Point(33,22);
         otrezok.setX(66);
         otrezok.print();

@@ -5,6 +5,8 @@ public class Product {
     double price;
     double discount;
 
+    // поле double discount - можно было не создавать и в аргументах метода applyDiscount() - указать аругмент, в main после этого вызывать метод - чтобы присаивать скидку.
+
     public Product(String newName,double newPrice){
         this.price = newPrice;
         this.name = newName;
@@ -27,7 +29,7 @@ public class Product {
     }
 
     public double applyDiscount(){
-return price - (price * (discount /100 ));
+     return price - (price * (discount /100));
         }
 
         void printInfo(){

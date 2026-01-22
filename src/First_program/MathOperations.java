@@ -18,7 +18,7 @@ public class MathOperations {
             double dis1 = 100, dis2 = 500, time1 = 32.5, time2 = 51.8;
             double avg1 = m.averageSpeed (dis1, time1), avg2 = m.averageSpeed(dis2, time2);
             System.out.println("Первая средняя скорость = " + avg1 + " м/с\nВторая средняя скрость = " + avg2 + " м/с");
-            double a1= 6.0, b1= 6, a2 = 17, b2 = 22;System.out.println("Гипотенуза первого треугольника = " + MathOperations.findHypotenuse(a1,b1) + "\nГипотенза второго треугольника = " + MathOperations.findHypotenuse(a2,b2));
+            double a1 = 6.0, b1 = 6, a2 = 17, b2 = 22;System.out.println("Гипотенуза первого треугольника = " + MathOperations.findHypotenuse(a1,b1) + "\nГипотенза второго треугольника = " + MathOperations.findHypotenuse(a2,b2));
             System.out.println("Длина окружности равна "+ MathOperations.circleCircumference(19));
             System.out.println("Одно число от другого в процентном соотношении будет составлять " + MathOperations.calculatePercentage((double) y, (double) x ) + " процентов");
             System.out.println("В Фарингейтах переведенных из Цельсий температура равна " + MathOperations.celsiusToFahrenheit(c));
