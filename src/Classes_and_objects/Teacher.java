@@ -10,19 +10,19 @@ public class Teacher {
     }
 
     public void setName(String newName) {
-        this.name = name;
+        this.name = newName;
     }
 
     public void setSubject(String newSubject){
         this.subject = newSubject;
     }
-public String getName(){
+    public String getName(){
         return  this.name;
-}
+    }
     public  String getSubject(){
         return  this.subject;
     }
-    void prinInfo(){
+    void printInfo(){
         System.out.println("Имя учителя " + this.name + " " + "Предмет " + this.subject);
     }
 }

@@ -9,7 +9,7 @@ public class Main {
         bmw.print();
 
         Rectangle figura = new Rectangle(10,4);
-        figura.setWeight(9);
+        figura.setWidth(9);
         System.out.println("Площадь " + figura.calculateArea());
 
         Book kniga = new Book("Gogol","Mertvie Dushi");
@@ -36,7 +36,7 @@ public class Main {
 
         Teacher man = new Teacher("Petr","Math");
         man.setSubject("Literatura");
-        man.prinInfo();
+        man.printInfo();
 
         Product meat = new Product("Chicken",1000);
         meat.setDiscount(30);

@@ -1,28 +1,28 @@
 package Classes_and_objects;
 
 public class Rectangle {
-    int weight;
+    int width;
     int height;
 
-    public Rectangle(int newHeight,int newWeight){
+    public Rectangle(int newHeight,int newWidth){
         this.height = newHeight;
-        this.weight = newWeight;
+        this.width = newWidth;
     }
 
     int getHeight(){
         return this.height;
     }
 
-    int getWeight(){
-        return this.weight;
+    int getWidth(){
+        return this.width;
     }
 
-     public void setWeight(int newWeight){
-        this.weight = newWeight;
+     public void setWidth(int newWidth){
+        this.width = newWidth;
      }
 
      int calculateArea(){
-        return weight * height;
+        return width * height;
      }
 
 

@@ -23,14 +23,7 @@ public class BankAccount {
         return this.balance;
         }
 
-        public void deposit(int newBalance){
-        this.balance += 500;
-    }
-        public void withdraw(int newBalance){
-        this.balance -= 250;
-        }
 
-        /* Исправил ошибки при создании методов убрав хардкод, теперь
         public void deposit(int amount){
         this.balance += amount;
         }
@@ -38,7 +31,6 @@ public class BankAccount {
         public void withdraw(int amount){
         this.balance -= amount;
         }
-         */
 
      void printBalance(){
          System.out.println("Ваш баланс " + this.balance);
