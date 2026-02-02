@@ -1,69 +1,47 @@
 package Static_and_modify;
 
 public class Main {
+public static void main(String[] args){
+ Company sber = new Company(5,"Petya");
+ Company vtb = new Company(6,"Petya");
 
-    public static void main(String[] args) {
-        Company sber = new Company(6,"Vasya");
-        Company nobugs = new Company(7,"Alex");
+ Company.companyName = "Alfa Bank";
 
-       Company.companyName = "OTP Bank";
+ Company.printCompanyName();
+ System.out.println(sber.getCompanyName());
+ System.out.println(vtb.getCompanyName());
 
-        System.out.println(sber.getCompanyName());
-        System.out.println(nobugs.getCompanyName());
+ System.out.println(MathConstants.calculateCircleArea(9.4));
+ System.out.println(MathConstants.calculateCircumference(8.2));
 
-        // статический метод - может использовать только статические поля
-        // статический метод - не работает с нестатическим полем
-        // нестатический метод - работает со статическим полем
-        // нестатический метод - работает с нестатическим полем
+University danila = new University("danila");
+University andrei = new University("andrei");
+University kolya = new University("kolya");
 
-        System.out.println(MathConstants.calculateCircleArea(5));
-        System.out.println(MathConstants.calculateCircleArea(12));
+University.changeUniversityName("Oksford");
+danila.printStudentInfo();
+andrei.printStudentInfo();
+kolya.printStudentInfo();
 
-        University danya = new University("gfds");
-        University andrei = new University("fgfgd");
-        University bogat = new University("fgg");
-        University vanya  = new University("Fg");
+GameSettings igra1 = new GameSettings("WOW",10);
+GameSettings igta2 = new GameSettings("WOT",5);
 
-        University.changeUniversityName("Oksford");
+GameSettings.maxPlayers = 10;
 
-        danya.printStudentInfo();
-        andrei.printStudentInfo();
-        bogat.printStudentInfo();
-        vanya.printStudentInfo();
-
-        Person andreiseniorjava = new Person("ffffff","gggggg","123");
-        Person danilabname = new Person("kkkkkkk","oooooo","54334242");
-
-        andreiseniorjava.setFirstName("РЖАВЫЙ СЕНИЬОР ФУЛЛ ПРО МАКС ДЖАВА");
-
-        andreiseniorjava.printPersonInfo();
-        danilabname.printPersonInfo();
-
-        GameSettings igra1 = new GameSettings(1,"Iris Online");
-        GameSettings igra2 = new GameSettings(3,"WOW");
-
-        GameSettings.maxPlayers = 3;
-
-        igra1.addPlayer();
-        igra2.addPlayer();
-
-        igra1.printGameStatus();
-        igra2.printGameStatus();
+igra1.addPlayer();
+igta2.addPlayer();
 
 
+igra1.printGameStatus();
+igta2.printGameStatus();
+
+Person danilajava = new Person("Danila","Martynchev","122-41-4116");
+Person sashajava = new Person("Sasha","Zubkov","123-45-6789");
+
+danilajava.setFirstName("Pasha");
+danilajava.printPersonInfo();
+sashajava.printPersonInfo();
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-    }
+}
 }

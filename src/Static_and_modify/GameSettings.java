@@ -5,26 +5,25 @@ public class GameSettings {
     final String gameName;
     int currentPlayers;
 
-    public GameSettings(int currentPlayers, String gameName){
+    public GameSettings(String gameName,int currentPlayers){
         this.currentPlayers = currentPlayers;
         this.gameName = gameName;
     }
-
     static void setMaxPlayers(int newMaxPlayers){
-       maxPlayers = newMaxPlayers;
+        maxPlayers = newMaxPlayers;
     }
-
-    void addPlayer(){
+    void  addPlayer() {
         if (currentPlayers < maxPlayers) {
-            this.currentPlayers ++;
-            System.out.println("Добавление игроков допустимо");
+            this.currentPlayers++;
+            System.out.println("Добавление игрока допускаемо");
+        } else {
+            System.out.println("Лимит игроков превышен");
         }
-        else {
-            System.out.println("Количество игроков превышает допустимый максимум");
+    }
+            void printGameStatus(){
+                System.out.println("Название: " + gameName + " Текущее количество игроков: " + currentPlayers+ " Максимальное количество игроков: " + maxPlayers);
         }
     }
 
-    void printGameStatus(){
-        System.out.println("Название игры: " + gameName + ", Текущих игроков: " + currentPlayers + ", Максимальное количество игроков: " + maxPlayers);
-    }
-}
+
+

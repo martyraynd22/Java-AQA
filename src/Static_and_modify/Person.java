@@ -1,37 +1,36 @@
 package Static_and_modify;
 
 public class Person {
-    private String firstName;
+    private  String firstName;
     private String lastName;
     private final String ssn;
 
     public Person(String firstName, String lastName, String ssn){
         this.firstName = firstName;
-        this.ssn = ssn;
         this.lastName = lastName;
+        this.ssn = ssn;
     }
 
-    public String getFirstName() {
+    public String getFirstName(){
         return firstName;
     }
 
-    public String getLastName() {
+    public String getLastName(){
         return lastName;
     }
 
-    public String getSsn() {
+    public  String getSsn(){
         return ssn;
     }
 
-    public void setFirstName(String firstName) {
+    public void setFirstName(String firstName){
         this.firstName = firstName;
     }
-
-    public void setLastName(String lastName) {
+    public void setLastName(String lastName){
         this.lastName = lastName;
     }
-
     void printPersonInfo(){
-        System.out.println("Имя: " + firstName + ", Фамилия: " + lastName + ", SSN : " + ssn);
+        System.out.println("Имя: " + firstName + " Фамилия: " + lastName + " SSN: " + ssn );
     }
-}
+    }
+
