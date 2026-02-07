@@ -4,11 +4,11 @@ import java.util.Scanner;
 
 public class Switch {
     public static void main(String[] args){
-
         Scanner scanner = new Scanner(System.in);
+
         /*
         int day = scanner.nextInt();
-        switch (day){
+        switch (day) {
             case 1 :
                 System.out.println("Понедельник");
                 break;
@@ -31,68 +31,69 @@ public class Switch {
                 System.out.println("Воскресенье");
                 break;
             default:
-                System.out.println("Такого дня недели нет!");
+                System.out.println("Такого дня недели не существует");
         }
          */
 
         /*
-
         int day = scanner.nextInt();
-        switch (day){
-            case 1, 2, 3, 4,5:
-                System.out.println("300 рублей");
+        switch (day) {
+            case 1,2,3,4,5 :
+                System.out.println("Стоимость билета в кино сегодня 300 рублей");
                 break;
-            case 6, 7:
-                System.out.println("450 рублей");
+            case 6,7 :
+                System.out.println("Стоимость билета в кино сегодня 450 рублей");
                 break;
             default:
-                System.out.println("Такого дня недели нет!");
+                System.out.println("Такого дня недели не существует");
         }
          */
 
         /*
-
         int ocenka = scanner.nextInt();
-            switch (ocenka / 10) {
-                case (10) -> System.out.println("A");
-                case (9) -> System.out.println("B");
-                case (8) -> System.out.println("C");
-                case (7) -> System.out.println("D");
-                case 6, 5, 4, 3, 2, 1 -> System.out.println("F");
-                default -> System.out.println("Не входит в диапазон");
+        switch (ocenka / 10) {
+            case (10) -> System.out.println("A");
+            case (9) -> System.out.println("A");
+            case (8) -> System.out.println("B");
+            case (7) -> System.out.println("C");
+            case (6) -> System.out.println("D");
+            case 5,4,3,2,1 -> System.out.println("F");
+            default -> System.out.println("Не существует такого перевода в оценку");
         }
          */
 
         /*
-        while (true) {
-            System.out.println("Введите команду: ");
-            String system = scanner.nextLine();
-            switch (system) {
-                case "start" -> System.out.println("Система запущена");
-                case "stop" -> System.out.println("Система остановлена");
-                case "restart" -> System.out.println("Система перезапущена");
-                case "status" -> System.out.println("Система статус");
-                default -> System.out.println("Такой команды нет");
+
+        while (true){
+            System.out.println("Введите команду :");
+            String command = scanner.nextLine();
+            switch (command){
+                case "start" -> System.out.println("Приложение запущно");
+                case "stop" -> System.out.println("Приложение остановлено");
+                case "restart" -> System.out.println("Рестарт приложения");
+                case "status" -> System.out.println("Стаус приложенния: система работает корректно");
+                default -> System.out.println("Система не распознает данную команду");
             }
         }
          */
 
         /*
-
         int number1 = scanner.nextInt();
-        int number2 = scanner.nextInt();
         String operator = scanner.next();
+        int number2 = scanner.nextInt();
 
-        if (number2 == 0 && operator.equals("/")){
-            System.out.println("На 0 делить нельзя");
+        if (number2 == 0 && operator.equals("/") ) {
+            System.out.println("На 0 делиться нельзя");
         }
-        switch (operator) {
-            case "*" -> System.out.println(number1 * number2);
+        switch (operator){
             case "+" -> System.out.println(number1 + number2);
             case "-" -> System.out.println(number1 - number2);
+            case "*" -> System.out.println(number1 * number2);
             case "/" -> System.out.println(number1 / number2);
-            }
-         */
         }
+         */
+
+
 
     }
+}
