@@ -2,27 +2,24 @@ package OperatorsJava;
 
 import java.util.Scanner;
 
-public class Breakandcontinue {
+public class BreakandcontinueTasks {
     public static void main(String[] args) {
-
-        /*
         Scanner scanner = new Scanner(System.in);
+
+        //Сумма чисел до первого отрицательного
         int number;
         int count = 0;
-        while (true){
+        while (true) {
             number = scanner.nextInt();
-            if(number >= 0){
+            if (number >= 0) {
                 count = count + number;
-            }
-            else {
+            } else {
                 System.out.println("Сумма введеных чисел до ввода отрицательного равна:" + count);
                 break;
             }
         }
 
-         */
-
-        /*
+        //Пропуск чисел делящихся на 3
         for (int i = 1; i < 20; i++) {
             if (i % 3 == 0) {
                 continue;
@@ -31,32 +28,34 @@ public class Breakandcontinue {
             }
         }
 
-         */
 
-        /*
-
-        Scanner scanner = new Scanner(System.in);
-        int number;
-        do {
-            number = scanner.nextInt();
-            if(number < 0 ){
-                continue;}
-            System.out.println("Вы вводили: " + number);
+        //Вывод только положительных чисел
+        int number2;
+        int i = 5;
+        while (i > 0) {
+            number2 = scanner.nextInt();
+            i--;
+            if (number2 < 0) {
+                continue;
             }
-            while (true);
+            System.out.println(number2);
+        }
 
-         */
-
-        Scanner scanner = new Scanner(System.in);
-        while (true){
-            System.out.println("Введите слово: ");
+        //Вывод строк до команды "stop"
+        while (true) {
             String words = scanner.nextLine();
             if (words.equals("stop")){
                 break;
             }
+            else {
+                System.out.println("Введите слово для выхода: ");
+                continue;
+            }
         }
         }
         }
+
+
 
 
 
