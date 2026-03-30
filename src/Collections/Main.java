@@ -35,10 +35,10 @@ public class Main {
         //LinkedList
         //Задача 3:Создайте LinkedList, содержащий несколько строк. Напишите программу, которая печатает первый и последний элементы списка.
         List<String> stringList = new LinkedList<>();
-        stringList.add("AAA");
-        stringList.add("BBB");
-        stringList.add("CCC");
-        stringList.add("DDD");
+        stringList.add("ААА");
+        stringList.add("БББ");
+        stringList.add("ВВВ");
+        stringList.add("ГГГ");
         System.out.println(stringList.getFirst());
         System.out.println(stringList.getLast());
 
@@ -74,7 +74,7 @@ public class Main {
 
         //Задача 3:Реализуйте метод, который принимает List<String> и возвращает Set<String> без дубликатов.
         List<String> firstList = new ArrayList<>(List.of("22","22","33","33"));
-        System.out.println(mutable(firstList));
+        System.out.println(removeDuplicates(firstList));
 
         //LinkedHashSet
         //Задача 2:Напишите метод, который добавляет элемент в LinkedHashSet, но не добавляет дубликаты.
@@ -84,8 +84,8 @@ public class Main {
         noDuble.add(7);
         noDuble.add(10);
         System.out.println(noDuble);
-        addNoDuble(noDuble,5);
-        addNoDuble(noDuble,9999);
+        addIfAbsent(noDuble,5);
+        addIfAbsent(noDuble,9999);
         System.out.println(noDuble);
 
         //TreeSet
@@ -108,7 +108,7 @@ public class Main {
         friends.put("Александр",18);
         System.out.println(friends.entrySet());
         //Задача 2:Проверьте, есть ли определённое имя в HashMap.
-        System.out.println(friends.containsKey("Генадий"));
+        System.out.println(friends.containsKey("Катя") ? "Элемент есть в коллекции" : "Элемента нет в коллекции");
 
         //LinkedHashMap
         //Задача 2:Реализуйте телефонную книгу с LinkedHashMap. Добавьте и найдите контакт.
@@ -136,7 +136,7 @@ public class Main {
         priorityQueue.offer(3);
         priorityQueue.offer(5);
         priorityQueue.offer(9999);
-        System.out.println(priorityQueue);
+        removalProcedure(priorityQueue);
 
         //ArrayDeque
         //Задача 3:Используйте ArrayDeque как очередь: добавьте элементы в начало и конец, извлеките из обоих концов.
@@ -153,23 +153,13 @@ public class Main {
         System.out.println(arrayDeque);
 
 
-
-
-
-
-
-
-
-
-
-
     }
 
-    public static Set<String> mutable(List<String> s) {
+    public static Set<String> removeDuplicates(List<String> s) {
         return new HashSet<>(s);
     }
 
-    public static void addNoDuble(LinkedHashSet<Integer> s, Integer element){
+    public static void addIfAbsent(LinkedHashSet<Integer> s, Integer element){
         if(s.contains(element)){
             System.out.println("Элемент уже есть в коллекции");
             return;
@@ -177,5 +167,14 @@ public class Main {
         s.add(element);
         System.out.println("Элемента " + element + " ранее не было");
         }
+
+    public static PriorityQueue<Integer> removalProcedure(PriorityQueue<Integer> s) {
+        while (!s.isEmpty()) {
+            System.out.println(s.poll());
+        }
+        return s;
+    }
+
+
     }
 
