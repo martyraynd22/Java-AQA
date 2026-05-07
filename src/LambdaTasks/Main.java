@@ -1,11 +1,6 @@
 package LambdaTasks;
 
-import com.sun.jdi.IntegerValue;
-
-import java.util.ArrayList;
-import java.util.Comparator;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 import java.util.function.Consumer;
 import java.util.function.Function;
 import java.util.function.Predicate;
@@ -109,18 +104,16 @@ public class Main {
         System.out.println(summa);
 
         //4. Поиск первого элемента, начинающегося на "Б"
-        List<String> findLetter = friends.stream()
-                .filter(s -> s.startsWith("Б"))
-                .findFirst()
-                .stream().toList();
+        Optional<String> findLetter = friends.stream()
+                .filter(s -> s != null && !s.isEmpty())
+                .filter(s -> Character.toLowerCase(s.charAt(0)) == 'б')
+                .findFirst();
         System.out.println(findLetter);
 
         //5.Проверка наличия хотя бы одного элемента по условию
-        List<Integer> findDistinct = integerList.stream()
-                .filter(s->s % 2 ==0)
-                .distinct()
-                .toList();
-        System.out.println(findDistinct);
+        boolean hasEven = integerList.stream()
+                .anyMatch(s->s % 2 ==0);
+        System.out.println(hasEven);
 
         //Часть 4: Stream API – группировка и редукция
         //1. Группировка строк по первой букве
