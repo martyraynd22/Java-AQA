@@ -3,7 +3,7 @@ package Collections;
 import java.util.*;
 
 public class Main {
-    static void main() {
+    public static void main(String[] args) {
         //ArrayList
         //Задача 2:Напишите программу, которая выводит все чётные числа из ArrayList.
 

@@ -1,7 +1,7 @@
 package Multithreading.Task4;
 
 public class Main {
-    static void main(String[] args) throws InterruptedException{
+    public static void main(String[] args) throws InterruptedException{
         Counter counter = new Counter();
         Thread t1 = new Thread(()->{
             for (int i = 0; i < 1000; i++){

@@ -1,7 +1,7 @@
 package Multithreading.Task1;
 
 public class Main {
-    static void main(String[] args)  {
+    public static void main(String[] args)  {
         Thread t1 = new Thread(()->{
             for (int i = 0; i < 5; i++){
                 try {

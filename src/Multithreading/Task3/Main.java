@@ -3,7 +3,7 @@ package Multithreading.Task3;
 public class Main {
     private static volatile int counter = 0;
     private static volatile boolean stop = false;
-    static void main(String[] args) throws InterruptedException{
+    public static void main(String[] args) throws InterruptedException{
         Thread t1 = new Thread(()->{
             while (!stop){
                  counter++;
