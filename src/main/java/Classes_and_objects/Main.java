@@ -4,7 +4,7 @@ import java.awt.*;
 
 public class Main {
     public static void main(String[] args){
-        Car bmw = new Car("X5",2000);
+        Classes_and_objects.Car bmw = new Classes_and_objects.Car("X5",2000);
         bmw.setYear(1999);
         bmw.print();
 
@@ -16,7 +16,7 @@ public class Main {
         kniga.setAuthor("Tolstoy");
         kniga.printInfo();
 
-        BankAccount ytka = new BankAccount("Makdak",500);
+        Classes_and_objects.BankAccount ytka = new Classes_and_objects.BankAccount("Makdak",500);
         ytka.deposit(50);
         ytka.withdraw(50);
         ytka.printBalance();
