@@ -49,7 +49,7 @@ public class FactorialTest extends Preconditions{
 
     @DisplayName("Отрицательные числа")
     @Test
-    void factorialIsNotPossitiveValue(){
+    void factorialIsNotPositiveValue(){
         assertThrows(IllegalArgumentException.class,()-> homeWork.factorial(-100));
     }
 }

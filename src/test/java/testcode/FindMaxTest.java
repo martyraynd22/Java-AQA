@@ -45,7 +45,7 @@ public class FindMaxTest extends Preconditions{
     @DisplayName("Тест на массивы с положительными и отрицательными числами")
     @ParameterizedTest
     @MethodSource("arraysPositiveCase")
-    void returnMaxNumber_isPossitiveCasesArray(int[] numbers, int number){
+    void returnMaxNumber_isPositiveCasesArray(int[] numbers, int number){
         assertEquals(number,homeWork.findMax(numbers));
     }
 

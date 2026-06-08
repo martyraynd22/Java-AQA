@@ -40,7 +40,7 @@ public class ReverseStringTest extends Preconditions{
     @ParameterizedTest
     @MethodSource("baseStrings")
     void reversePositiveCase_ReturnCorrectReverseString(String base, String actual){
-        assertEquals(base,homeWork.reverse(actual));
+        assertEquals(actual,homeWork.reverse(base));
     }
 
     @DisplayName("Тест на пустую строку и строку с пробелами")

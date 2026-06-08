@@ -39,14 +39,14 @@ public class CountVowelsTest extends Preconditions{
     @DisplayName("Тест на разные строки")
     @ParameterizedTest
     @MethodSource("positiveCase")
-    void returnCount_PoisitveStringCase(String string,int count){
+    void returnCount_PositiveStringCase(String string,int count){
         assertEquals(count,homeWork.countVowels(string));
     }
 
     @DisplayName("Тест на пустую стироку, строку пробелов и строку без гласных")
     @ParameterizedTest
     @ValueSource(strings = {"fghpKMV","","  "})
-    void returnValse_Negative_StringCase(String string){
+    void returnFalse_Negative_StringCase(String string){
         assertEquals(0,homeWork.countVowels(string));
     }
 

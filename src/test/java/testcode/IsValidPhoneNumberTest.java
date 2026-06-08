@@ -25,7 +25,7 @@ public class IsValidPhoneNumberTest extends Preconditions {
     @DisplayName("Тест на корректные номера")
     @ParameterizedTest
     @ValueSource(strings = {"+7 9062829001", "+123 4564567890"})
-    void returnTrue_IsValidProneNumber(String number) {
+    void returnTrue_IsValidPhoneNumber(String number) {
         assertTrue(homeWork.isValidPhoneNumber(number));
     }
 

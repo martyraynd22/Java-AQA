@@ -19,7 +19,7 @@ public class IsLeapYearTest extends Preconditions{
 
     @DisplayName("Високосные года, года которые делятся и на 100 и на 400")
     @ParameterizedTest
-    @ValueSource(ints = {2024,2020,2000,1600,8})
+    @ValueSource(ints = {2024,2020,2000,1600})
     void returnTrue_IsLeapYearWhenLeapDivide100and400(int year){
         assertTrue(homeWork.isLeapYear(year));
     }

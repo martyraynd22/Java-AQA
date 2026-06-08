@@ -40,7 +40,7 @@ public class CountWordsTest extends Preconditions{
         assertEquals(expected,homeWork.countWords(actual));
     }
 
-    @DisplayName("Тест на nul")
+    @DisplayName("Тест на null")
     @Test
     void returnNull_WhenStringIsNull(){
         assertThrows(NullPointerException.class, () ->homeWork.countWords(null));
