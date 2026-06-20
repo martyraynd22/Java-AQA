@@ -2,18 +2,11 @@ package DebugTasks;
 
 public class DebugTask6 {
     public static void main(String[] args) {
-    countdown(5);
+    countdown(3);
 }
     public static void countdown(int n) {
-        if (n > 1) {
+        if (n < 1) return;
             System.out.println(n);
             countdown(n - 1);
-        } else if (n <= 0) {
-            System.out.println(n);
-            countdown(n + 1);
-        } else {
-            System.out.println(n);
         }
     }
-}
-

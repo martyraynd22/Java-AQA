@@ -13,8 +13,8 @@ public class Person {
         public int getAge() {
             return age;
         }
-        public void setNewAge(){
-            this.age++;
+        public void setAge(int age){
+            this.age = age;
         }
         }
 
