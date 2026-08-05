@@ -3,7 +3,7 @@ package GenericsTask.Generics;
 public class Box<T> {
     private T element;
 
-    public Box() {
+    public Box(T element) {
         this.element = element;
     }
 

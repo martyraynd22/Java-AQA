@@ -7,16 +7,18 @@ import GenericsTask.Generics.Pair;
 
 import java.io.FileNotFoundException;
 import java.io.FileReader;
+import java.io.IOException;
 
 public class Main {
     public static void main(String[] args) throws AgeArgumentException {
         //Исключения
         //1.Обработка проверяемого исключения
 
-        try {
-            FileReader fileReader = new FileReader("data.txt");
+        try (FileReader fileReader = new FileReader("data.txt")) {
         } catch (FileNotFoundException e) {
             System.out.println("Файл не найден");
+        } catch (IOException e) {
+            System.out.println("Ошибка при чтении или закрытии файла");
         }
 
         //2.Обработка непроверяемого исключения
@@ -31,13 +33,13 @@ public class Main {
         validateEmail("aqa@mail.ru");
         //validateEmail("bug1");
 
-        //Джинерики
+        //Дженерики
         //1. Задача на дженерик класс
 
-        Box<String> boxStinrg = new Box<>();
-        boxStinrg.setElement("Книга со строками");
-        System.out.println(boxStinrg.getElement());
-        Box<Integer> boxInteger = new Box<>();
+        Box<String> boxString = new Box<>("Книга");
+        boxString.setElement("Книга со строками");
+        System.out.println(boxString.getElement());
+        Box<Integer> boxInteger = new Box<>(1);
         boxInteger.setElement(1000000);
         System.out.println(boxInteger.getElement());
 
@@ -53,15 +55,12 @@ public class Main {
         pair.setKey("Ноутбук");
         pair.setValue(1);
         System.out.println(pair.getKey() + " " + pair.getValue());
-
-
-
         }
 
 
         //2. Деление на 0
         public static void divide (int a, int b){
-        try {
+        try { if(b != 0)
             System.out.println(a + " / " + b + " = " + a/b);
         } catch (RuntimeException e) {
             throw new RuntimeException("На 0 делить нельзя");
@@ -76,8 +75,11 @@ public class Main {
             System.out.println("Возраст пользователя валиден");
         }
 
-        //4. Метод для проверки валидности мейлp
+        //4. Метод для проверки валидности мейл
         public static void validateEmail(String email){
+            if (email == null) {
+                throw new IllegalArgumentException("Email не может быть null");
+            }
         if (email.matches("^[a-zA-Z0-9_!#$%&'*+/=?`{|}~^-]+(?:\\.[a-zA-Z0-9_!#$%&'*+/=?`{|}~^-]+)*@[a-zA-Z0-9-]+(?:\\.[a-zA-Z0-9-]+)*$")){
             System.out.println("Email валиден");
             return;
