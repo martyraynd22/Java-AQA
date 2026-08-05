@@ -60,10 +60,10 @@ public class Main {
 
         //2. Деление на 0
         public static void divide (int a, int b){
-        try { if(b != 0)
+        try {
             System.out.println(a + " / " + b + " = " + a/b);
-        } catch (RuntimeException e) {
-            throw new RuntimeException("На 0 делить нельзя");
+        } catch (ArithmeticException e) {
+            throw new ArithmeticException("На 0 делить нельзя");
         }
         }
 
